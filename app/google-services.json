@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "199194838674",
+    "firebase_url": "https://appfirebasecoches.firebaseio.com",
+    "project_id": "appfirebasecoches",
+    "storage_bucket": "appfirebasecoches.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199194838674:android:d400be871ef85930",
+        "android_client_info": {
+          "package_name": "com.example.a21752434.appfirebasecoches"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199194838674-nr9goq5t8hgchs6ur46dinl1j3ij55ts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7H8kxLRmxxAxPtOOFSRDMIzLXtXDE_Ko"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
