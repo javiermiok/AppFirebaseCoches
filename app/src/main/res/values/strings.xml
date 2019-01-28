@@ -2,10 +2,9 @@
     <string name="app_name">Colección de Coches</string>
 
     <!--                 ACTIVITY MAIN                      -->
-    <string name="btn_consultar_main">Consultar coches</string>
-    <string name="btn_alta_main">Alta de coche</string>
-    <string name="btn_modificar_main">Modificar Coche</string>
-    <string name="btn_borrar_main">Borrar Coche</string>
+    <string name="btn_alta_main">Alta</string>
+    <string name="btn_modificar_main">Modificar</string>
+    <string name="btn_borrar_main">Borrar</string>
 
     <!--                 ITEM_COCHE.XML                     -->
     <string name="tv_matricula_item">Matrícula: %s</string>
@@ -22,7 +21,9 @@
     <string name="tv_precio_alta">Precio:</string>
     <string name="btn_crear_alta">Crear</string>
     <string name="btn_cancelar_alta">Cancelar</string>
+
     <string name="toast_error_alta">Todos los campos tiene que estar rellenados</string>
+    <string name="toast_no_mod">No se ha guardado la modifcación</string>
 
     <!--                 ACTIVITY                       -->
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearVMain"
+    android:id="@+id/relativeMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,35 +10,44 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/btnConsultaMain"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMain"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_layout"
-        android:onClick="consultar"
-        android:text="@string/btn_consultar_main" />
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btnAltaMain"
+    <LinearLayout
+        android:id="@+id/linearHMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_layout"
-        android:onClick="alta"
-        android:text="@string/btn_alta_main" />
+        android:layout_alignStart="@+id/rvMain"
+        android:layout_alignLeft="@+id/rvMain"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnModificarMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_layout"
-        android:onClick="modificar"
-        android:text="@string/btn_modificar_main" />
+        <Button
+            android:id="@+id/btnAltaMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="alta"
+            android:text="@string/btn_alta_main" />
 
-    <Button
-        android:id="@+id/btnBorrarMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_layout"
-        android:onClick="borrar"
-        android:text="@string/btn_borrar_main" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btnModifMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="modificar"
+            android:text="@string/btn_modificar_main" />
+
+        <Button
+            android:id="@+id/btnBorrarMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="borrar"
+            android:text="@string/btn_borrar_main" />
+    </LinearLayout>
+
+</RelativeLayout>
