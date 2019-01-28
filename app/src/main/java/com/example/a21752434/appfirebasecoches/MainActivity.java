@@ -1,9 +1,10 @@
 package com.example.a21752434.appfirebasecoches;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,27 +14,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_coches, menu);
-        return true;
+
+    public void consultar(View v) {
+        startActivity(new Intent(MainActivity.this, ConsultaActivity.class));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        if(item.getItemId() == R.id.menu_insertar) {
-
-        } else if(item.getItemId() == R.id.menu_modificar) {
-
-        } else if(item.getItemId() == R.id.menu_consulta_todos) {
-
-        } else if(item.getItemId() == R.id.menu_consultar_anio) {
-
-        } else if(item.getItemId() == R.id.menu_finalizar) {
-
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void alta(View v) {
+        startActivity(new Intent(MainActivity.this, AltaActivity.class));
     }
+
+    public void modificar(View v) {
+
+    }
+
+    public void borrar(View v) {
+
+    }
+
 }

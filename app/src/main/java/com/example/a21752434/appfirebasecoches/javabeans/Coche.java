@@ -2,6 +2,7 @@ package com.example.a21752434.appfirebasecoches.javabeans;
 
 public class Coche {
 
+    private String idFirebase;
     private String matricula;
     private String modelo;
     private String color;
@@ -39,4 +40,11 @@ public class Coche {
         return precio;
     }
 
+    public String getIdFirebase() {
+        return idFirebase;
+    }
+
+    public void setIdFirebase(String idFirebase) {
+        this.idFirebase = idFirebase;
+    }
 }
