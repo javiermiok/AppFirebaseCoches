@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AppFirebaseCoches</string>
+    <string name="menu_insertar_coche">Insertar Coche</string>
+    <string name="menu_modificar_coche">Modificar Coche</string>
+    <string name="menu_consultar_todos">Consultar Todos</string>
+    <string name="menu_consultar_anio">Consultar por Año</string>
+    <string name="menu_finalizar">Finalizar</string>
 </resources>

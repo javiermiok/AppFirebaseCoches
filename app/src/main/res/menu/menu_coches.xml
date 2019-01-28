@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/menu_modificar"
+        android:orderInCategory="2"
+        android:title="@string/menu_modificar_coche" />
+    <item
+        android:id="@+id/menu_insertar"
+        android:orderInCategory="1"
+        android:title="@string/menu_insertar_coche"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_consulta_todos"
+        android:orderInCategory="3"
+        android:title="@string/menu_consultar_todos" />
+    <item
+        android:id="@+id/menu_consultar_anio"
+        android:orderInCategory="4"
+        android:title="@string/menu_consultar_anio" />
+    <item
+        android:id="@+id/menu_finalizar"
+        android:orderInCategory="5"
+        android:title="@string/menu_finalizar" />
 </menu>
