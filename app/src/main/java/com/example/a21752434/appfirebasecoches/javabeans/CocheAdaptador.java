@@ -12,21 +12,24 @@ import com.example.a21752434.appfirebasecoches.R;
 
 import java.util.ArrayList;
 
-public class CocheAdaptador extends RecyclerView.Adapter<CocheAdaptador.CocheViewHolder> {
+public class CocheAdaptador extends RecyclerView.Adapter<CocheAdaptador.CocheViewHolder>
+        implements View.OnClickListener{
 
     private ArrayList<Coche> lista;
     private Context contexto;
+    private View.OnClickListener listener;
 
     public CocheAdaptador(ArrayList<Coche> lista, Context contexto) {
         this.lista = lista;
         this.contexto = contexto;
     }
 
-    /*                       MÉTODOS NECESARIOS                                    */
+    /*-------------------          MÉTODOS NECESARIOS                 --------------------- */
     @NonNull
     @Override
     public CocheViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_coche, viewGroup, false);
+        v.setOnClickListener(this);
         CocheViewHolder cvh = new CocheViewHolder(v, contexto);
 
         return cvh;
@@ -40,6 +43,17 @@ public class CocheAdaptador extends RecyclerView.Adapter<CocheAdaptador.CocheVie
     @Override
     public int getItemCount() {
         return lista.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(listener != null) {
+            listener.onClick(v);
+        }
+    }
+
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
     }
 
     public void clear() {

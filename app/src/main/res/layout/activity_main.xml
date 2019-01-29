@@ -39,7 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="modificar"
-            android:text="@string/btn_modificar_main" />
+            android:text="@string/btn_modificar_main"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btnBorrarMain"
@@ -47,7 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="borrar"
-            android:text="@string/btn_borrar_main" />
+            android:text="@string/btn_borrar_main"
+            android:visibility="gone" />
     </LinearLayout>
 
 </RelativeLayout>

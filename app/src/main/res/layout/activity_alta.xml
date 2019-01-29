@@ -119,13 +119,23 @@
         android:text="@string/btn_crear_alta" />
 
     <Button
+        android:id="@+id/btnBorrarAlta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:onClick="borrar"
+        android:text="@string/btn_borrar_alta" />
+
+    <Button
         android:id="@+id/btnCancelarAlta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btnCrearAlta"
         android:layout_alignLeft="@+id/btnCrearAlta"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="30dp"
         android:onClick="cancelar"
         android:text="@string/btn_cancelar_alta" />
 

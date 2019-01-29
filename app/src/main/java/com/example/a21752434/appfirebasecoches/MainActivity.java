@@ -45,9 +45,23 @@ public class MainActivity extends AppCompatActivity {
 
         // Iniciar atributos
         remitente = "persona1";
-        rvCoches = findViewById(R.id.rvConsulta);
+        rvCoches = findViewById(R.id.rvMain);
         datos = new ArrayList<Coche>();
         adapter = new CocheAdaptador(datos, getApplicationContext());
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Test
+                String msg = "Seleccionada la opción " + rvCoches.getChildAdapterPosition(v) ;
+                Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT).show();
+
+                //Pasar a la ventana PantallaNotasALumno
+                Intent i = new Intent(MainActivity.this, AltaActivity.class);
+                i.putExtra("CLAVE_ACCION", REQ_CODE_MOD);
+                i.putExtra("DATOS_SELECCION", datos.get(rvCoches.getChildAdapterPosition(v)));
+                startActivity(i);
+            }
+        });
         manager = new LinearLayoutManager(this);
 
         rvCoches.setAdapter(adapter);
@@ -61,25 +75,28 @@ public class MainActivity extends AppCompatActivity {
 
     public void alta(View v) {
         Intent i = new Intent(MainActivity.this, AltaActivity.class);
-        i.putExtra("CLAVE_ACCION", REQ_CODE_ALTA);
+       // i.putExtra("CLAVE_ACCION", REQ_CODE_ALTA);
         //i.putParcelableArrayListExtra("DATA", datos);
         //startActivity(i);
-        startActivityForResult(i, REQ_CODE_ALTA);
+        //startActivityForResult(i, REQ_CODE_ALTA);
+        startActivity(i);
     }
 
+    /*SIN USAR*/
     public void modificar(View v) {
-        Intent i = new Intent(MainActivity.this, AltaActivity.class);
-        i.putExtra("CLAVE_ACCION", REQ_CODE_MOD);
+        //Intent i = new Intent(MainActivity.this, AltaActivity.class);
+        //i.putExtra("CLAVE_ACCION", REQ_CODE_MOD);
         //i.putParcelableArrayListExtra("DATA", datos);
         //startActivity(i);
-        startActivityForResult(i, REQ_CODE_MOD);
+        //startActivityForResult(i, REQ_CODE_MOD);
     }
 
+    /*SIN USAR*/
     public void borrar(View v) {
 
     }
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == Activity.RESULT_OK) {
@@ -90,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 t.show();
             }
         }
-    }
+    }*/
 
     private void addChildEventListener() {
         if(cel == null) {

@@ -24,6 +24,11 @@
 
     <string name="toast_error_alta">Todos los campos tiene que estar rellenados</string>
     <string name="toast_no_mod">No se ha guardado la modifcación</string>
+    <string name="dialog_cancelar">Cancelar</string>
+    <string name="dialog_proceder">Proceder</string>
+    <string name="dialgo_mensaje_confirmación">¿Seguro que quiere proceder?</string>
+    <string name="toast_error_sin_cambios">No has realizado ningún cambio</string>
+    <string name="btn_borrar_alta">Eliminar</string>
 
     <!--                 ACTIVITY                       -->
 
